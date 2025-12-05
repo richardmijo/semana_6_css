@@ -37,7 +37,6 @@
 
     <main class="container">
 
-        <!-- SECTION 0: MANUAL BÁSICO -->
         <section id="basics" class="chapter basics-section">
             <div class="chapter-header">
                 <span class="chapter-number">00</span>
@@ -46,7 +45,6 @@
             </div>
 
             <div class="grid-2">
-                <!-- Concept 1: Syntax -->
                 <article class="concept-card">
                     <h3>1. La Regla de Oro (Sintaxis)</h3>
                     <p>CSS es un lenguaje de diseño, no de programación lógica. Es una lista de órdenes visuales.</p>
@@ -62,7 +60,6 @@
                     </ul>
                 </article>
 
-                <!-- Concept 2: The Dot Mystery -->
                 <article class="concept-card">
                     <h3>2. El Misterio del Punto (.)</h3>
                     <p>¿Por qué algunos nombres llevan punto y otros no? Todo depende de a quién llamas.</p>
@@ -87,7 +84,6 @@
                     </div>
                 </article>
 
-                <!-- Concept 3: Direct Example -->
                 <article class="concept-card full-width">
                     <h3>3. Ejemplo Real: Etiqueta vs Clase</h3>
                     <div class="comparison-grid">
@@ -118,7 +114,6 @@ button {
             </div>
         </section>
 
-        <!-- SECTION 0.5: PSEUDO-CLASES -->
         <section id="pseudo" class="chapter">
             <div class="chapter-header">
                 <span class="chapter-number">00.5</span>
@@ -133,7 +128,6 @@ button {
             </div>
 
             <div class="grid-2">
-                <!-- Group 1: Interaction -->
                 <article class="demo-card vertical">
                     <div class="card-visual small">
                         <a href="#" class="demo-link">¡Interactúa conmigo!</a>
@@ -154,7 +148,6 @@ button {
                     </div>
                 </article>
 
-                <!-- Group 2: Structure -->
                 <article class="demo-card vertical">
                     <div class="card-visual small">
                         <div class="list-demo">
@@ -176,7 +169,6 @@ button {
                     </div>
                 </article>
 
-                <!-- Group 3: Forms & States -->
                 <article class="demo-card vertical">
                     <div class="card-visual small">
                         <div class="form-states">
@@ -198,7 +190,6 @@ button {
             </div>
         </section>
 
-        <!-- SECTION 1: PRINCIPIOS BÁSICOS -->
         <section id="principles" class="chapter">
             <div class="chapter-header">
                 <span class="chapter-number">01</span>
@@ -212,7 +203,6 @@ button {
                 </div>
             </div>
 
-            <!-- Demo Card: Interpolation -->
             <article class="demo-card">
                 <div class="card-visual">
                     <div class="demo-stage">
@@ -249,7 +239,6 @@ button {
             </article>
         </section>
 
-        <!-- SECTION 2: TRANSICIONES -->
         <section id="transitions" class="chapter">
             <div class="chapter-header">
                 <span class="chapter-number">02</span>
@@ -264,7 +253,6 @@ button {
             </div>
 
             <div class="grid-2">
-                <!-- Demo 2.1 -->
                 <article class="demo-card vertical">
                     <div class="card-visual small">
                         <button class="btn-morph">Pasa el Mouse</button>
@@ -290,7 +278,6 @@ button {
                     </div>
                 </article>
 
-                <!-- Demo 2.2 -->
                 <article class="demo-card vertical">
                     <div class="card-visual small">
                         <div class="card-hover-3d">
@@ -315,7 +302,6 @@ button {
             </div>
         </section>
 
-        <!-- SECTION 3: TIMING FUNCTIONS -->
         <section id="timing" class="chapter">
             <div class="chapter-header">
                 <span class="chapter-number">03</span>
@@ -364,7 +350,6 @@ button {
             </div>
         </section>
 
-        <!-- SECTION 4: KEYFRAMES -->
         <section id="keyframes" class="chapter">
             <div class="chapter-header">
                 <span class="chapter-number">04</span>
@@ -379,7 +364,6 @@ button {
                 </div>
             </div>
 
-            <!-- Detailed Tutorial: Creation vs Call -->
             <article class="concept-card full-width" style="margin-bottom: 40px; background: #fff;">
                 <h3>🎓 Master Class: Creando una Animación desde Cero</h3>
                 <p>Para animar con Keyframes necesitamos dos pasos obligatorios: <strong>Crear</strong> y
@@ -427,7 +411,6 @@ button {
                     </div>
                 </div>
 
-                <!-- Visual Result of the Tutorial -->
                 <div class="demo-result">
                     <div class="demo-stage small">
                         <div class="tutorial-ball"></div>
@@ -460,6 +443,36 @@ button {
   /* Nombre | Duración | Estilo | Repetición */
   animation: girar 2s linear infinite;
 }</code></pre>
+                    </div>
+                </div>
+            </article>
+
+            <article class="demo-card vertical">
+                <div class="card-visual">
+                    <div class="netflix-stage">
+                        <div class="kinetic-loader"></div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Nivel 3: Cubic-Bezier Morph</h3>
+                    <p>Un loader con personalidad. Combina <strong>3 propiedades</strong> a la vez y usa una curva de velocidad personalizada.</p>
+
+                    <div class="code-wrapper">
+                        <div class="code-header">
+                            <span class="lang-tag">CSS - Curva Personalizada</span>
+                        </div>
+                        <pre><code>.loader {
+  /* Gira, escala y cambia forma */
+  /* La curva "resorte" */
+  animation-timing-function: 
+    cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}</code></pre>
+                    </div>
+                    
+                    <div class="analogy-box" style="margin-top: 20px; border-left-color: var(--danger); background: #fff5f5;">
+                        <i class="fa-solid fa-rocket" style="color: var(--danger);"></i>
+                        <strong>Reto de Comprensión:</strong>
+                        <p style="color: var(--text-main);">¿Notas cómo el cuadrado "toma impulso" hacia atrás antes de girar? Eso lo hacen los valores negativos en el <code>cubic-bezier</code>.</p>
                     </div>
                 </div>
             </article>
