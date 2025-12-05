@@ -2,26 +2,26 @@
    1. DESIGN SYSTEM & VARIABLES (LIGHT THEME)
    ========================================= */
 :root {
-    /* Colores - High Contrast Classroom Theme */
+    /* Colores - User's Favorite (Red & Black) */
     --bg-body: #ffffff;
+    /* Pure White */
     --bg-card: #f8f9fa;
-    --bg-code: #f1f3f5;
-    /* Gris muy claro para bloques de código */
+    --bg-code: #000000;
+    /* Deep Black for code */
 
-    --text-main: #2d3436;
-    /* Charcoal oscuro, mejor que negro puro */
+    --text-main: #000000;
+    /* Pure Black */
     --text-muted: #636e72;
 
-    --primary: #0984e3;
-    /* Azul brillante y legible */
-    --primary-dark: #00cec9;
+    --primary: #c0392b;
+    /* Strong Red */
+    --primary-dark: #a93226;
 
-    --accent: #00b894;
-    /* Verde esmeralda */
-    --danger: #d63031;
-    /* Rojo fuerte */
+    --accent: #2c3e50;
+    /* Black/Dark Blue Grey */
+    --danger: #e74c3c;
 
-    --border-light: #dfe6e9;
+    --border-light: #dcdde1;
 
     /* Spacing & Layout */
     --container-width: 1200px;
@@ -29,9 +29,9 @@
     --radius-md: 12px;
     --radius-lg: 16px;
 
-    /* Effects - Simples y definidos para proyector */
-    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
-    --border-card: 2px solid var(--border-light);
+    /* Effects */
+    --shadow-card: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --border-card: 1px solid rgba(0, 0, 0, 0.1);
 
     --font-main: 'Outfit', sans-serif;
     --font-code: 'Fira Code', monospace;
@@ -628,6 +628,35 @@ code {
     background: var(--danger);
     border-radius: 50px;
     transform: scale(1.1);
+}
+
+/* Nuevo Botón Reactivo - Nivel 1 */
+.my-reactive-btn {
+    padding: 15px 30px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid transparent;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy transition */
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.my-reactive-btn:hover {
+    background-color: var(--accent);
+    color: var(--text-main);
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.my-reactive-btn:active {
+    transform: scale(0.95) translateY(4px);
+    border-color: var(--primary-dark);
+    box-shadow: none;
 }
 
 .card-hover-3d {
