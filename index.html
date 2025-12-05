@@ -383,7 +383,8 @@ button {
             <article class="concept-card full-width" style="margin-bottom: 40px; background: #fff;">
                 <h3>🎓 Master Class: Creando una Animación desde Cero</h3>
                 <p>Para animar con Keyframes necesitamos dos pasos obligatorios: <strong>Crear</strong> y
-                    <strong>Llamar</strong>.</p>
+                    <strong>Llamar</strong>.
+                </p>
 
                 <div class="grid-2">
                     <div class="step-col">
@@ -433,7 +434,8 @@ button {
                         <div class="tutorial-ball"></div>
                     </div>
                     <p class="tiny-note center">Resultado: La clase <code>.pelota</code> ejecuta los
-                        <code>@keyframes rebotar</code>.</p>
+                        <code>@keyframes rebotar</code>.
+                    </p>
                 </div>
             </article>
 
@@ -464,6 +466,71 @@ button {
                 </div>
             </article>
 
+        </section>
+
+
+        <!-- SECTION 5: NIVEL 4 - CARTA 3D -->
+        <section id="level4" class="chapter">
+            <div class="chapter-header">
+                <span class="chapter-number">05</span>
+                <h2>Nivel 4: La Carta 3D</h2>
+                <div class="analogy-box">
+                    <i class="fa-solid fa-cube"></i>
+                    <strong>Analogía: El Escenario Teatral</strong>
+                    <p>Para ver profundidad en una pantalla plana (2D), necesitamos "engañar" al ojo. <br>
+                        La propiedad <code>perspective</code> es la distancia desde donde mira el público.
+                        Si no hay perspectiva, todo se ve plano aunque gire.</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card-visual">
+                    <div class="scene">
+                        <div class="card-3d">
+                            <div class="card__face card__face--front">
+                                <i class="fa-regular fa-id-card card-icon"></i>
+                                <p>Pasa el mouse para revelar</p>
+                            </div>
+                            <div class="card__face card__face--back">
+                                <i class="fa-solid fa-check-circle card-icon"></i>
+                                <p>¡Información Secreta!</p>
+                                <p style="font-size: 0.8rem; margin-top: 10px;">Transform: rotateY(180deg)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="interaction-hint" style="margin-top: 30px;">👆 Hover para girar</p>
+                </div>
+
+                <div class="card-content">
+                    <h3>Los 3 Ingredientes del 3D</h3>
+                    <ul class="concept-list">
+                        <li><strong>Perspective:</strong> En el PADRE. Define la profundidad.</li>
+                        <li><strong>Transform-style: preserve-3d:</strong> En el HIJO. Permite que sus hijos vivan en
+                            3D.
+                        </li>
+                        <li><strong>Backface-visibility: hidden:</strong> Oculta la "nuca" de los elementos.</li>
+                    </ul>
+
+                    <div class="code-manual">
+                        <pre><code>.escenario {
+  perspective: 600px; /* Profundidad */
+}
+
+.carta {
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.escenario:hover .carta {
+  transform: rotateY(180deg); /* Giro */
+}
+
+.cara {
+  backface-visibility: hidden; /* Ocultar revés */
+}</code></pre>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
