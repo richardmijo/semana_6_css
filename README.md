@@ -1,10 +1,10 @@
-# 🎓 Taller Práctico: "Master of Puppets" (Dominando CSS)
+# Práctica: "Master of Puppets" (Dominando CSS)
 
-## 🎯 Objetivo
+## Objetivo
 El objetivo no es solo que el código "funcione", sino que **entiendas** cómo el navegador está animando los elementos.
 Vas a descargar este proyecto y realizar **UNO** de los siguientes desafíos en tu propia rama (branch).
 
-## 🛠️ Flujo de Trabajo (Git)
+## Flujo de Trabajo (Git)
 1.  **Clonar** el repositorio.
 2.  Crear tu rama: `git checkout -b desafio-tu-nombre` (Ej: `desafio-juan-perez`).
 3.  Elegir un desafío de abajo y programarlo.
@@ -13,7 +13,7 @@ Vas a descargar este proyecto y realizar **UNO** de los siguientes desafíos en 
 
 ---
 
-## 🚀 Desafíos (Escoge Uno)
+## Desafíos (Escoge Uno)
 
 ### Nivel 1: El Camaleón (Pseudo-clases & Variables)
 **Misión**: Personalizar la identidad del sitio y crear un elemento reactivo.
