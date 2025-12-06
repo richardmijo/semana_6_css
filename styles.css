@@ -1,36 +1,28 @@
 /* =========================================
-   1. DESIGN SYSTEM & VARIABLES (LIGHT THEME)
+   1. DESIGN SYSTEM & VARIABLES (MARJORIE'S THEME)
    ========================================= */
 :root {
-    /* Colores - High Contrast Classroom Theme */
-    --bg-body: #ffffff;
-    --bg-card: #f8f9fa;
-    --bg-code: #f1f3f5;
-    /* Gris muy claro para bloques de código */
+    /* Paleta accesible: alto contraste, tonos cálidos pero legibles en proyector */
+    --bg-body: #fcfbf9;          /* Crema suave (menos blanco que cansa) */
+    --bg-card: #ffffff;          /* Blanco puro para tarjetas (máximo contraste) */
+    --bg-code: #f8f6f2;          /* Crema claro para código */
 
-    --text-main: #2d3436;
-    /* Charcoal oscuro, mejor que negro puro */
-    --text-muted: #636e72;
+    --text-main: #2c2c2c;        /* Gris oscuro (mejor que negro puro para lectura prolongada) */
+    --text-muted: #5a5a5a;
 
-    --primary: #0984e3;
-    /* Azul brillante y legible */
-    --primary-dark: #00cec9;
+    --primary: #007fe0;          /* Azul universitario (UIE-inspired), accesible en contraste */
+    --primary-dark: #441253;     /* Para estados hover/active */
 
-    --accent: #00b894;
-    /* Verde esmeralda */
-    --danger: #d63031;
-    /* Rojo fuerte */
+    --accent: #62b31b;           /* Naranja cálido (UDE/ODS 9 tono cítrico) — atención sin agresividad */
+    --danger: #a52a2a;           /* Rojo tierra (menos estridente) */
 
-    --border-light: #dfe6e9;
+    --border-light: #d1c9c2;     /* Gris-beige suave */
 
-    /* Spacing & Layout */
-    --container-width: 1200px;
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 14px;
 
-    /* Effects - Simples y definidos para proyector */
-    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.06);
     --border-card: 2px solid var(--border-light);
 
     --font-main: 'Outfit', sans-serif;
@@ -553,7 +545,7 @@ code {
     border-color: var(--primary);
     background: #e3f2fd;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.2);
+    box-shadow: 0 0 0 3px rgba(42, 92, 130, 0.2);
 }
 
 /* List Demos */
@@ -840,6 +832,55 @@ code {
         transform: scale(0.6);
         opacity: 0.7;
     }
+}
+
+/* ==============================
+   DESAFÍO NIVEL 1: BOTÓN CAMALEÓN
+   ============================== */
+
+/* 
+   Estado BASE: define apariencia inicial y prepara la transición.
+   IMPORTANTE: transition va aquí y no en :hover porque anima los cambios
+   *desde* este estado hacia cualquier otro (:hover, :active, :focus).
+   Si estuviera en :hover, no habría animación al SALIR del hover.
+*/
+.boton-camaleon {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    /* Transición suave para múltiples propiedades */
+    transition: 
+        background-color 0.3s ease,
+        transform 0.15s ease,
+        border-color 0.3s ease,
+        font-size 0.3s ease;
+}
+
+/*
+   :hover → Cambio de identidad: color + tamaño
+   El texto crece ligeramente (1.1rem → 1.2rem) para dar feedback visual suave.
+*/
+.boton-camaleon:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    font-size: 1.2rem; /* Crecimiento sutil pero perceptible */
+}
+
+/*
+   :active → "Hundimiento" táctil
+   Simula un botón físico: se reduce 2px verticalmente y el borde oscurece.
+   Usa transform: translateY(2px) en lugar de margin/padding para evitar reflow.
+*/
+.boton-camaleon:active {
+    transform: translateY(2px);
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    /* No cambiamos font-size aquí para evitar "temblor" visual */
 }
 
 /* Footer */
