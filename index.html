@@ -195,6 +195,27 @@ button {
                         </ul>
                     </div>
                 </article>
+
+                <!-- NUEVO: Desafío Botón Interactivo -->
+                <article class="demo-card vertical">
+                    <div class="card-visual small">
+                        <button class="challenge-btn">¡Presióname!</button>
+                    </div>
+                    <div class="card-content">
+                        <h3>🎯 Desafío: Botón con Múltiples Estados</h3>
+                        <p>Este botón demuestra el uso correcto de <code>:hover</code> y <code>:active</code> con transiciones fluidas.</p>
+                        <ul class="concept-list">
+                            <li><strong>:hover</strong> → El texto crece y cambia el color de fondo.</li>
+                            <li><strong>:active</strong> → El botón se "hunde" visualmente.</li>
+                        </ul>
+                        <div class="code-wrapper">
+                            <pre><code>/* Consulta styles.css línea ~950 */
+.challenge-btn { transition: all 0.3s; }
+.challenge-btn:hover { /* Cambios suaves */ }
+.challenge-btn:active { /* Efecto instantáneo */ }</code></pre>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 

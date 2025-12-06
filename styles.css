@@ -2,7 +2,7 @@
    1. DESIGN SYSTEM & VARIABLES (LIGHT THEME)
    ========================================= */
 :root {
-    /* Colores - High Contrast Classroom Theme */
+    /* Colores - Paleta Personalizada (Morado & Naranja) */
     --bg-body: #ffffff;
     --bg-card: #f8f9fa;
     --bg-code: #f1f3f5;
@@ -12,14 +12,14 @@
     /* Charcoal oscuro, mejor que negro puro */
     --text-muted: #636e72;
 
-    --primary: #0984e3;
-    /* Azul brillante y legible */
-    --primary-dark: #00cec9;
+    --primary: #8e44ad;
+    /* Morado vibrante */
+    --primary-dark: #6c3483;
 
-    --accent: #00b894;
-    /* Verde esmeralda */
-    --danger: #d63031;
-    /* Rojo fuerte */
+    --accent: #e67e22;
+    /* Naranja cálido */
+    --danger: #e74c3c;
+    /* Rojo coral */
 
     --border-light: #dfe6e9;
 
@@ -608,6 +608,56 @@ code {
 .form-states input:invalid {
     border-color: var(--danger);
     background: #fab1a0;
+}
+
+/* =========================================
+   DESAFÍO: Challenge Button
+   ========================================= */
+.challenge-btn {
+    padding: 18px 40px;
+    background: var(--primary);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: 3px solid var(--primary-dark);
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 6px 0 var(--primary-dark);
+    
+    /* 🔑 CLAVE: La transición se define en el ESTADO BASE
+       Razón: Queremos que TODOS los cambios (hover, active, volver a normal)
+       tengan la misma duración suave. Si la ponemos solo en :hover,
+       cuando el mouse salga, el botón volverá de golpe sin animación.
+    */
+    transition: all 0.3s ease;
+}
+
+.challenge-btn:hover {
+    /* Cambia el color de fondo */
+    background: var(--accent);
+    border-color: #d35400;
+    box-shadow: 0 6px 0 #d35400;
+    
+    /* El texto crece (escala) */
+    font-size: 1.2rem;
+    transform: translateY(-2px);
+    
+    /* ❌ NO ponemos transition aquí porque:
+       - Ya está definido en el estado base (.challenge-btn)
+       - Si lo ponemos aquí, solo afectaría al ENTRAR al hover
+       - Al SALIR del hover, volvería sin animación (cambio brusco)
+    */
+}
+
+.challenge-btn:active {
+    /* Efecto de "hundir" el botón */
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #d35400;
+    background: #d35400;
+    
+    /* El :active es instantáneo (mientras presionas)
+       La transición del estado base hace que sea suave
+    */
 }
 
 
